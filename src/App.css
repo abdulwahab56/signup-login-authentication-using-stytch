@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  padding: 1rem 1rem;
+}
+.nav-link {
+  font-size: 1.6rem;
+}
