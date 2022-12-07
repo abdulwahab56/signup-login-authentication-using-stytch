@@ -1,7 +1,12 @@
 import React from "react";
 
 const ResetPassword = () => {
-  return <div>ResetPassword</div>;
+  return (
+    <div>
+      <input placeholder="reset password..." />
+      <button>reset</button>
+    </div>
+  );
 };
 
 export default ResetPassword;

@@ -13,13 +13,16 @@ function App() {
   const stytchClient = new StytchHeadlessClient(
     "public-token-test-a241de09-51cc-4881-a0c7-1875d27e1188"
   );
+  const logout = () => {
+    stytchClient.session.revoke();
+  };
   return (
     <div className="App">
       <div className="nav">
         <Link to="/signup" className="nav-link" onClick={() => setToggle(true)}>
           Signup
         </Link>
-        <Link to="/login" className="nav-link">
+        <Link to="/login" className="nav-link" onClick={() => setToggle(true)}>
           Login
         </Link>
       </div>
@@ -28,11 +31,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/restpassword/*" element={<ResetPassword />} />
+          <Route path="/resetpassword/*" element={<ResetPassword />} />
         </Routes>
       </StytchProvider>
 
-      {toggle && <button>Logout</button>}
+      {toggle && <button onClick={logout}>Logout</button>}
     </div>
   );
 }
